@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>&#x73af;&#x5883;&#x51c6;&#x5907;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension bierner.markdown-preview-github-styles */
+html,
+body,
+.github-markdown-body {
+    padding: 0 !important;
+    max-width: auto !important;
+}
+
+.github-markdown-body {
+    background-color: var(--color-canvas-default);
+    color: var(--color-fg-default);
+}
+
+.github-markdown-body {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100% !important;
+}
+
+.github-markdown-content {
+    padding: 32px !important;
+    max-width: 980px;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+
+.vscode-body.scrollBeyondLastLine {
+    margin-bottom: 0;
+}
+.vscode-body.scrollBeyondLastLine .github-markdown-body {
+    padding-bottom: calc(100vh + 10px) !important;
+}
+
+.github-markdown-body blockquote {
+    background-color: initial;
+}
+
+.github-markdown-body pre {
+    color: initial;
+}
+
+.github-markdown-body code {
+    color: inherit;
+}
+
+.github-markdown-body pre code {
+    color: initial;
+}
+
+.github-markdown-body code > div {
+    background: none
+}
+
+.github-markdown-body.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.github-markdown-body p,
+.github-markdown-body blockquote,
+.github-markdown-body ul,
+.github-markdown-body ol,
+.github-markdown-body dl,
+.github-markdown-body table,
+.github-markdown-body pre {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Generated from 'node_modules/github-markdown-css/github-markdown.css' */
+
+.github-markdown-light,
+.vscode-body.vscode-light .github-markdown-auto {
+  color-scheme: light;
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #FFEBE9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-fg-default: #24292f;
+  --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781;
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d0d7de;
+  --color-border-muted: hsla(210,18%,87%,1);
+  --color-neutral-muted: rgba(175,184,193,0.2);
+  --color-accent-fg: #0969da;
+  --color-accent-emphasis: #0969da;
+  --color-danger-fg: #cf222e;
+}
+
+.github-markdown-dark,
+.vscode-body.vscode-dark .github-markdown-auto {
+  color-scheme: dark;
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-subtle: #484f58;
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-neutral-muted: rgba(110,118,129,0.4);
+  --color-accent-fg: #58a6ff;
+  --color-accent-emphasis: #1f6feb;
+  --color-danger-fg: #f85149;
+}
+
+@media (prefers-color-scheme: dark) {
+  .github-markdown-system {
+    color-scheme: dark;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #c9d1d9;
+    --color-fg-muted: #8b949e;
+    --color-fg-subtle: #484f58;
+    --color-canvas-default: #0d1117;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-accent-fg: #58a6ff;
+    --color-accent-emphasis: #1f6feb;
+    --color-danger-fg: #f85149;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .github-markdown-system {
+    color-scheme: light;
+    --color-prettylights-syntax-comment: #6e7781;
+    --color-prettylights-syntax-constant: #0550ae;
+    --color-prettylights-syntax-entity: #8250df;
+    --color-prettylights-syntax-storage-modifier-import: #24292f;
+    --color-prettylights-syntax-entity-tag: #116329;
+    --color-prettylights-syntax-keyword: #cf222e;
+    --color-prettylights-syntax-string: #0a3069;
+    --color-prettylights-syntax-variable: #953800;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+    --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+    --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+    --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+    --color-prettylights-syntax-carriage-return-bg: #cf222e;
+    --color-prettylights-syntax-string-regexp: #116329;
+    --color-prettylights-syntax-markup-list: #3b2300;
+    --color-prettylights-syntax-markup-heading: #0550ae;
+    --color-prettylights-syntax-markup-italic: #24292f;
+    --color-prettylights-syntax-markup-bold: #24292f;
+    --color-prettylights-syntax-markup-deleted-text: #82071e;
+    --color-prettylights-syntax-markup-deleted-bg: #FFEBE9;
+    --color-prettylights-syntax-markup-inserted-text: #116329;
+    --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+    --color-prettylights-syntax-markup-changed-text: #953800;
+    --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+    --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+    --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+    --color-prettylights-syntax-meta-diff-range: #8250df;
+    --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+    --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+    --color-fg-default: #24292f;
+    --color-fg-muted: #57606a;
+    --color-fg-subtle: #6e7781;
+    --color-canvas-default: #ffffff;
+    --color-canvas-subtle: #f6f8fa;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-accent-fg: #0969da;
+    --color-accent-emphasis: #0969da;
+    --color-danger-fg: #cf222e;
+  }
+}
+
+.github-markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.github-markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.github-markdown-body h1:hover .anchor .octicon-link:before,
+.github-markdown-body h2:hover .anchor .octicon-link:before,
+.github-markdown-body h3:hover .anchor .octicon-link:before,
+.github-markdown-body h4:hover .anchor .octicon-link:before,
+.github-markdown-body h5:hover .anchor .octicon-link:before,
+.github-markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
+}
+
+.github-markdown-body details,
+.github-markdown-body figcaption,
+.github-markdown-body figure {
+  display: block;
+}
+
+.github-markdown-body summary {
+  display: list-item;
+}
+
+.github-markdown-body a {
+  background-color: transparent;
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+.github-markdown-body a:active,
+.github-markdown-body a:hover {
+  outline-width: 0;
+}
+
+.github-markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.github-markdown-body b,
+.github-markdown-body strong {
+  font-weight: 600;
+}
+
+.github-markdown-body dfn {
+  font-style: italic;
+}
+
+.github-markdown-body h1 {
+  margin: .67em 0;
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.github-markdown-body mark {
+  background-color: #ff0;
+  color: var(--color-text-primary);
+}
+
+.github-markdown-body small {
+  font-size: 90%;
+}
+
+.github-markdown-body sub,
+.github-markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.github-markdown-body sub {
+  bottom: -0.25em;
+}
+
+.github-markdown-body sup {
+  top: -0.5em;
+}
+
+.github-markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--color-canvas-default);
+}
+
+.github-markdown-body code,
+.github-markdown-body kbd,
+.github-markdown-body pre,
+.github-markdown-body samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.github-markdown-body figure {
+  margin: 1em 40px;
+}
+
+.github-markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid var(--color-border-muted);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: var(--color-border-default);
+  border: 0;
+}
+
+.github-markdown-body html [type=button],
+.github-markdown-body [type=reset],
+.github-markdown-body [type=submit] {
+  -webkit-appearance: button;
+}
+
+.github-markdown-body [type=button]::-moz-focus-inner,
+.github-markdown-body [type=reset]::-moz-focus-inner,
+.github-markdown-body [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.github-markdown-body [type=button]:-moz-focusring,
+.github-markdown-body [type=reset]:-moz-focusring,
+.github-markdown-body [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.github-markdown-body [type=checkbox],
+.github-markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.github-markdown-body [type=number]::-webkit-inner-spin-button,
+.github-markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.github-markdown-body [type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+.github-markdown-body [type=search]::-webkit-search-cancel-button,
+.github-markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.github-markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.github-markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+.github-markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.github-markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.github-markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.github-markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.github-markdown-body td,
+.github-markdown-body th {
+  padding: 0;
+}
+
+.github-markdown-body details summary {
+  cursor: pointer;
+}
+
+.github-markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.github-markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-subtle);
+  border: solid 1px var(--color-neutral-muted);
+  border-bottom-color: var(--color-neutral-muted);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 var(--color-neutral-muted);
+}
+
+.github-markdown-body h1,
+.github-markdown-body h2,
+.github-markdown-body h3,
+.github-markdown-body h4,
+.github-markdown-body h5,
+.github-markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.github-markdown-body h2 {
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border-muted);
+}
+
+.github-markdown-body h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.github-markdown-body h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.github-markdown-body h5 {
+  font-weight: 600;
+  font-size: .875em;
+}
+
+.github-markdown-body h6 {
+  font-weight: 600;
+  font-size: .85em;
+  color: var(--color-fg-muted);
+}
+
+.github-markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.github-markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--color-fg-muted);
+  border-left: .25em solid var(--color-border-default);
+}
+
+.github-markdown-body ul,
+.github-markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.github-markdown-body ol ol,
+.github-markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.github-markdown-body ul ul ol,
+.github-markdown-body ul ol ol,
+.github-markdown-body ol ul ol,
+.github-markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.github-markdown-body dd {
+  margin-left: 0;
+}
+
+.github-markdown-body tt,
+.github-markdown-body code {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.github-markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.github-markdown-body :-ms-input-placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.github-markdown-body ::-ms-input-placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.github-markdown-body ::placeholder {
+  color: var(--color-fg-subtle);
+  opacity: 1;
+}
+
+.github-markdown-body .pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.github-markdown-body .pl-c1,
+.github-markdown-body .pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.github-markdown-body .pl-e,
+.github-markdown-body .pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.github-markdown-body .pl-smi,
+.github-markdown-body .pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.github-markdown-body .pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.github-markdown-body .pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.github-markdown-body .pl-s,
+.github-markdown-body .pl-pds,
+.github-markdown-body .pl-s .pl-pse .pl-s1,
+.github-markdown-body .pl-sr,
+.github-markdown-body .pl-sr .pl-cce,
+.github-markdown-body .pl-sr .pl-sre,
+.github-markdown-body .pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.github-markdown-body .pl-v,
+.github-markdown-body .pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.github-markdown-body .pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.github-markdown-body .pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.github-markdown-body .pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.github-markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.github-markdown-body .pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.github-markdown-body .pl-mh,
+.github-markdown-body .pl-mh .pl-en,
+.github-markdown-body .pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.github-markdown-body .pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.github-markdown-body .pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.github-markdown-body .pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.github-markdown-body .pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.github-markdown-body .pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.github-markdown-body .pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.github-markdown-body .pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.github-markdown-body .pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.github-markdown-body .pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.github-markdown-body .pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.github-markdown-body [data-catalyst] {
+  display: block;
+}
+
+.github-markdown-body g-emoji {
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.github-markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.github-markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.github-markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.github-markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.github-markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.github-markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.github-markdown-body .absent {
+  color: var(--color-danger-fg);
+}
+
+.github-markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.github-markdown-body .anchor:focus {
+  outline: none;
+}
+
+.github-markdown-body p,
+.github-markdown-body blockquote,
+.github-markdown-body ul,
+.github-markdown-body ol,
+.github-markdown-body dl,
+.github-markdown-body table,
+.github-markdown-body pre,
+.github-markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.github-markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.github-markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.github-markdown-body sup>a::before {
+  content: "[";
+}
+
+.github-markdown-body sup>a::after {
+  content: "]";
+}
+
+.github-markdown-body h1 .octicon-link,
+.github-markdown-body h2 .octicon-link,
+.github-markdown-body h3 .octicon-link,
+.github-markdown-body h4 .octicon-link,
+.github-markdown-body h5 .octicon-link,
+.github-markdown-body h6 .octicon-link {
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.github-markdown-body h1:hover .anchor,
+.github-markdown-body h2:hover .anchor,
+.github-markdown-body h3:hover .anchor,
+.github-markdown-body h4:hover .anchor,
+.github-markdown-body h5:hover .anchor,
+.github-markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.github-markdown-body h1:hover .anchor .octicon-link,
+.github-markdown-body h2:hover .anchor .octicon-link,
+.github-markdown-body h3:hover .anchor .octicon-link,
+.github-markdown-body h4:hover .anchor .octicon-link,
+.github-markdown-body h5:hover .anchor .octicon-link,
+.github-markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.github-markdown-body h1 tt,
+.github-markdown-body h1 code,
+.github-markdown-body h2 tt,
+.github-markdown-body h2 code,
+.github-markdown-body h3 tt,
+.github-markdown-body h3 code,
+.github-markdown-body h4 tt,
+.github-markdown-body h4 code,
+.github-markdown-body h5 tt,
+.github-markdown-body h5 code,
+.github-markdown-body h6 tt,
+.github-markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.github-markdown-body ul.no-list,
+.github-markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.github-markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.github-markdown-body ol[type=a] {
+  list-style-type: lower-alpha;
+}
+
+.github-markdown-body ol[type=i] {
+  list-style-type: lower-roman;
+}
+
+.github-markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.github-markdown-body ul ul,
+.github-markdown-body ul ol,
+.github-markdown-body ol ol,
+.github-markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.github-markdown-body li>p {
+  margin-top: 16px;
+}
+
+.github-markdown-body li+li {
+  margin-top: .25em;
+}
+
+.github-markdown-body dl {
+  padding: 0;
+}
+
+.github-markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.github-markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.github-markdown-body table th {
+  font-weight: 600;
+}
+
+.github-markdown-body table th,
+.github-markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--color-border-default);
+}
+
+.github-markdown-body table tr {
+  background-color: var(--color-canvas-default);
+  border-top: 1px solid var(--color-border-muted);
+}
+
+.github-markdown-body table tr:nth-child(2n) {
+  background-color: var(--color-canvas-subtle);
+}
+
+.github-markdown-body table img {
+  background-color: transparent;
+}
+
+.github-markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.github-markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.github-markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.github-markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.github-markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+}
+
+.github-markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.github-markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: var(--color-fg-default);
+}
+
+.github-markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.github-markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.github-markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.github-markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.github-markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.github-markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.github-markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.github-markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.github-markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.github-markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.github-markdown-body code,
+.github-markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--color-neutral-muted);
+  border-radius: 6px;
+}
+
+.github-markdown-body code br,
+.github-markdown-body tt br {
+  display: none;
+}
+
+.github-markdown-body del code {
+  text-decoration: inherit;
+}
+
+.github-markdown-body pre code {
+  font-size: 100%;
+}
+
+.github-markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.github-markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.github-markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.github-markdown-body .highlight pre,
+.github-markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+}
+
+.github-markdown-body pre code,
+.github-markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.github-markdown-body .csv-data td,
+.github-markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.github-markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: var(--color-canvas-default);
+  border: 0;
+}
+
+.github-markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.github-markdown-body .csv-data th {
+  font-weight: 600;
+  background: var(--color-canvas-subtle);
+  border-top: 0;
+}
+
+.github-markdown-body .footnotes {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.github-markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.github-markdown-body .footnotes li {
+  position: relative;
+}
+
+.github-markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid var(--color-accent-emphasis);
+  border-radius: 6px;
+}
+
+.github-markdown-body .footnotes li:target {
+  color: var(--color-fg-default);
+}
+
+.github-markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.github-markdown-body [hidden] {
+  display: none !important;
+}
+
+.github-markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+/*!
+  Theme: GitHub
+  Description: Highlight-js port of github.com theme
+  Author: github.com
+  Maintainer: @SNDST00M, @mjbvz
+  Updated: 2021-12-08
+*/
+.markdown-body pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.markdown-body code.hljs {
+  padding: 3px 5px;
+}
+
+/*!
+  Theme: GitHub
+  Description: Theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/
+.markdown-body .hljs {
+  color: var(--color-fg-default);
+  background: var(--color-canvas-subtle);
+}
+
+.markdown-body .hljs-doctag,
+.markdown-body .hljs-keyword,
+.markdown-body .hljs-meta .hljs-keyword,
+.markdown-body .hljs-template-tag,
+.markdown-body .hljs-template-variable,
+.markdown-body .hljs-type,
+.markdown-body .hljs-variable.language_ {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.markdown-body .hljs-title,
+.markdown-body .hljs-title.class_,
+.markdown-body .hljs-title.class_.inherited__,
+.markdown-body .hljs-title.function_ {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.markdown-body .hljs-attr,
+.markdown-body .hljs-attribute,
+.markdown-body .hljs-literal,
+.markdown-body .hljs-meta,
+.markdown-body .hljs-number,
+.markdown-body .hljs-operator,
+.markdown-body .hljs-selector-attr,
+.markdown-body .hljs-selector-class,
+.markdown-body .hljs-selector-id,
+.markdown-body .hljs-variable {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .hljs-meta .hljs-string,
+.markdown-body .hljs-regexp,
+.markdown-body .hljs-string {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.markdown-body .hljs-built_in,
+.markdown-body .hljs-symbol {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.markdown-body .hljs-code,
+.markdown-body .hljs-comment,
+.markdown-body .hljs-formula {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.markdown-body .hljs-name,
+.markdown-body .hljs-quote,
+.markdown-body .hljs-selector-pseudo,
+.markdown-body .hljs-selector-tag {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.markdown-body .hljs-subst {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.markdown-body .hljs-section {
+  color: var(--color-prettylights-syntax-markup-heading);
+  font-weight: bold;
+}
+
+.markdown-body .hljs-bullet {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.markdown-body .hljs-emphasis {
+  color: var(--color-prettylights-syntax-constant);
+  font-style: italic;
+}
+
+.markdown-body .hljs-strong {
+  color: var(--color-prettylights-syntax-constant);
+  font-weight: bold;
+}
+
+.markdown-body .hljs-addition {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.markdown-body .hljs-deletion {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <div class="github-markdown-body github-markdown-auto">
+            <div class="github-markdown-content"><h1 id="环境准备">环境准备</h1>
+<h2 id="下载必备的组件">下载必备的组件</h2>
+<p>首先到私有云下载必备的组件包，私有云地址如下：</p>
+<p><a href="http://10.10.75.200:5000">http://10.10.75.200:5000</a></p>
+<p>登录自己的私有云账号，如果没有账号请联系贺杨乐师兄</p>
+<p>需要的组件在以下路径内，把其中的内容下载到本地</p>
+<pre><code class="language-text">/Library/HepProgrames/CheckMATE/CheckMATE脚本安装包/
+</code></pre>
+<p><span style="color: red;">注意：必须下载到 Linux 系统或者 Mac 系统的本地</span></p>
+<p>文件夹 <span style="color: blue;">“CheckMATE脚本安装包”</span> 内，应包括以下内容</p>
+<pre><code class="language-text">checkmate2-master.zip
+delphes-master.zip
+HelloHEP.sh
+hepmc2.06.11.tgz
+pythia8245.tgz
+root_v6.18.04.source.tar.gz
+</code></pre>
+<p>其中 <span style="color: green;"><a href="http://HelloHEP.sh">HelloHEP.sh</a></span> 不是必要的，剩下的五个压缩包中 <code>root_v6.18.04.source.tar.gz</code> 是必要的，如果进一步要安装 <code>checkmate</code> 则其余几个压缩包也是必要的。</p>
+<p><span style="color: green;">HelloHEP.sh</span> 是一个在 <strong><code>Ubuntu</code></strong> 系统下安装 <code>cern root</code> 和 <code>checkmate</code> 等软件包的脚本</p>
+<h2 id="重置高性能计算中心的用户密码">重置高性能计算中心的用户密码</h2>
+<p>进入链接 <a href="https://hpc.htu.edu.cn/">https://hpc.htu.edu.cn/</a> ，点击 <strong>通过统一认证服务登录</strong> 以进入河南师范大学高性能计算平台的用户界面，首次登录使用的是自己的学号以及河南师范大学办事大厅的密码</p>
+<p><img src="file:///d:\参考资料\组内\cern_root_install\login1.png" alt="登录界面1"></p>
+<p><img src="file:///d:\参考资料\组内\cern_root_install\login2.png" alt="登录界面2"></p>
+<p><img src="file:///d:\参考资料\组内\cern_root_install\user_ui.png" alt="用户首页"></p>
+<p>点击右上角的用户姓名，打开下来菜单点击 <strong>重置密码</strong></p>
+<p><img src="file:///d:\参考资料\组内\cern_root_install\mod_passwd1.png" alt="修改密码1"></p>
+<p>输入新密码并再次输入以确认</p>
+<p><img src="file:///d:\参考资料\组内\cern_root_install\mod_passwd2.png" alt="修改密码2"></p>
+<p>点击确认以完成密码的修改</p>
+<h2 id="公共集群上的准备">公共集群上的准备</h2>
+<p>现在打开一个本地终端，输入以下命令，登录到公共集群，之所以这样查看，是因为如下内容，服务器外部地址中 <code>:</code> 后的内容是端口</p>
+<p><img src="file:///d:\参考资料\组内\cern_root_install\public_cluster_ssh.png" alt="ssh地址端口"></p>
+<pre><code class="language-bash">ssh -p 20015 用户名@59.70.85.6
+</code></pre>
+<p><code>用户名</code> 的位置填写你在公共集群上的用户名，下同</p>
+<p>比如我的用户名是 <strong>u2002084003</strong> 所以命令就是</p>
+<pre><code class="language-bash">ssh -p 20015 u2002084003@59.70.85.6
+</code></pre>
+<p><strong>-p 20015</strong> 参数指的是目标地址的端口</p>
+<p>密码是刚刚重置密码时输入的密码</p>
+<p>登录上之后，使用 <code>mkdir</code> 命令在用户目录下新建三个文件夹。</p>
+<pre><code class="language-bash"><span class="hljs-built_in">mkdir</span> Downloads Dependencies opt
+</code></pre>
+<p>其中：<br>
+第一个 <span style="color: blue;">Downloads</span> 文件夹用于存放所需的有安装包。<br>
+第二个 <span style="color: blue;">Dependencies</span> 文件夹用于存放所有的赖项。<br>
+第三个 <span style="color: blue;">opt</span> 文件夹用于存放所有安装的软件包。<br>
+后面的说明都会采用这些名称，但是也可以按照自己的习惯对文件夹自行命名</p>
+<p>现在进入 <span style="color: blue;">Downloads</span> 文件夹，输入以下命令，下载所需的依赖库的 <strong><span style="color: red;">rpm</span></strong> 格式安装包</p>
+<pre><code class="language-bash">yumdownloader libXpm-devel
+</code></pre>
+<p>这行命令会下载两个 <strong><span style="color: red;">rpm</span></strong> 格式安装包</p>
+<pre><code class="language-text">libXpm-devel-3.5.12-2.el7_9.i686.rpm
+libXpm-devel-3.5.12-2.el7_9.x86_64.rpm
+</code></pre>
+<p>其中 <strong><span style="color: red;">3.5.12-2.el7</span></strong> 表示版本号，根据下载时间的不同版本号可能会有不同</p>
+<p>我们需要的是尾缀 <strong><span style="color: red;">x86_64</span></strong> 的安装包，因为公共集群的服务器是 64 位系统</p>
+<h2 id="配置-anaconda-环境">配置 Anaconda 环境</h2>
+<p><strong>Anaconda</strong> 是一个用于科学计算和数据科学的 <code>Python</code> 和 <code>R</code> 发行版，它包含了许多科学计算和数据科学常用的包，并提供了一个虚拟环境管理工具 <code>conda</code> 来管理不同的 <code>Python</code> 环境。我们需要使用 <strong>Anaconda</strong> 来管理我们的 <code>Python</code> 环境。</p>
+<p>可以通过 <code>wget</code>  命令下载 <strong>Anaconda</strong> 或它的最小化版本 <strong>miniconda</strong></p>
+<p>但公共集群服务器的系统目录下已经有安装好了的 <strong>Anaconda</strong><br>
+所以可以使用以下命令直接进行配置</p>
+<pre><code class="language-bash"><span class="hljs-built_in">alias</span> conda=/opt/app/anaconda3/condabin/conda
+</code></pre>
+<p><code>alias</code> 是一个用于创建命令别名的命令，执行这行命令就相当于把当前用户当前终端下的 <code>conda</code> 命令指向了系统目录内的 <code>conda</code></p>
+<p>现在就已经可以使用 <strong>Anaconda</strong> 了，但我们现在使用的是系统内的 <strong>Anaconda</strong>，无法使用 <code>conda</code> 的完整功能，并且每次重新启动终端或重新登录公共集群时 <code>conda</code> 都不会自动加载。<br>
+这也意味着我们没有自己的 <code>Python</code> 环境，也就不能进行任何第三方库的安装。</p>
+<p>所以现在我们要初始化 <code>conda</code> 的环境配置并新建一个我们自己的 <code>Python</code> 环境。</p>
+<h3 id="初始化-conda-的环境配置">初始化 <code>conda</code> 的环境配置</h3>
+<p>首先，使用 <code>conda init</code> 命令可以初始化 <code>conda</code> 环境，由于公共集群的服务器使用的是 <strong>Bash shell</strong>，所以使用以下命令进行初始化操作</p>
+<pre><code class="language-bash">conda init bash
+</code></pre>
+<p>接下来可以查看 <code>.bashrc</code> 以检查 <code>conda</code> 是否已经添加进了环境变量</p>
+<pre><code class="language-bash">vim ~/.bashrc
+</code></pre>
+<p>在 <strong>Bash shell</strong> 中，用户目录即 <code>~</code> 目录下的 <code>.bashrc</code> 文件被称为用户的环境变量。可以把它理解为一个 <strong>Shell</strong> 脚本，每当用户打开一个新的终端时，终端都会自动执行 <code>.bashrc</code> 文件内的命令。</p>
+<p>此时 <code>.bashrc</code> 文件内应该已经有了如下内容</p>
+<pre><code class="language-bash"><span class="hljs-comment"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
+一些 shell 语句 ...
+<span class="hljs-comment"># &lt;&lt;&lt; conda inititalize &lt;&lt;&lt;</span>
+</code></pre>
+<p>这表明 <code>conda</code> 已经被正确配置了，此时我们重新启动一下环境变量</p>
+<pre><code class="language-bash"><span class="hljs-built_in">source</span> ~/.bashrc
+</code></pre>
+<p>这个时候，在终端内命令行的用户名前，就会出现 <code>(base)</code> 字样，例如</p>
+<pre><code class="language-text">(base) [用户名@workstation ~]
+</code></pre>
+<p>这表明我们已经处于 <strong>Anaconda</strong> 的虚拟 <code>Python</code> 环境 <code>base</code> 环境中了。</p>
+<h3 id="创建-python-虚拟环境">创建 <code>Python</code> 虚拟环境</h3>
+<p>接下来配置属于我们自己的 <code>Python</code> 虚拟环境</p>
+<p>使用 <code>conda env list</code> 可以查看当前拥有哪些 <code>Python</code> 环境<br>
+如果你没有新建过任何 <code>Python</code> 环境，那么这条命令预期会有以下输出</p>
+<pre><code class="language-text"># conda environments:
+#
+base                    /opt/app/anaconda3
+cuda-11.3               /opt/app/anaconda3/envs/cuda-11.3
+</code></pre>
+<p>使用 <code>conda create</code> 命令配置一个新的环境，可以命名为 <code>py27</code> 以保持和 <code>multinest</code> 环境相同，也可以按照需求命名为诸如 <code>smodels</code> <code>mg5_2</code> <code>mg5_3</code> <code>checkmate</code> 等名称</p>
+<p>下面以 <code>py27</code> 为例进行配置</p>
+<pre><code class="language-bash">conda create -n py27 python=2.7
+</code></pre>
+<p><code>create</code> 表示使用 <code>conda</code> 创建一个新 <code>Python</code> 环境<br>
+<code>-n</code> 表示接下来将指定新环境名称<br>
+<code>py27</code> 表示新环境的名称<br>
+<code>python=2.7</code> 表示该 <code>Python</code> 环境所搭载的 <code>Python</code> 版本，这里指定的是 <code>Python 2.7</code> 版本</p>
+<p>环境创建途中会询问是否继续，输入 <code>y</code> 以继续</p>
+<p>等待必要的库都自动下载安装完毕后，该环境就已经创建完成了，此时查看环境会有以下预期输出</p>
+<pre><code class="language-bash">conda <span class="hljs-built_in">env</span> list
+</code></pre>
+<pre><code class="language-text"># conda environments:
+#
+py27                  * /home/用户名/.conda/envs/py27
+base                    /opt/app/anaconda3
+cuda-11.3               /opt/app/anaconda3/envs/cuda-11.3
+</code></pre>
+<p>使用 <code>conda activate</code> 命令可以切换环境，例如可以输入以下命令切换到刚才创建的 <code>py27</code> 环境</p>
+<pre><code class="language-bash">conda activate py27
+</code></pre>
+<p>现在用户名前的 <code>(base)</code> 就会变成 <code>(py27)</code>，</p>
+<pre><code class="language-text">(py27) [用户名@workstation ~]
+</code></pre>
+<p>此时输入 <code>python</code> 命令打开 <code>Python</code> 交互界面，可以看到 <code>Python</code> 的版本确实是 <code>Python 2.7</code></p>
+<pre><code class="language-text">Python 2.7.18 |Anaconda, Inc.| (default, Nov 25 2022, 06:27:37)
+[GCC 11.2.0] on linux2
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</code></pre>
+<p>根据具体情况的不同，上述输出信息可能与实际情况存在部分差异</p>
+<p>至此 <strong>Anaconda</strong> 的 <code>Python</code> 虚拟环境的配置已经完成</p>
+<h3 id="安装-python-第三方库可选">安装 <code>Python</code> 第三方库（可选）</h3>
+<p>使用 <code>conda create</code> 命令创建的虚拟环境默认情况下没有任何额外的 <code>Python</code> 库，如有需要则必须自行安装</p>
+<p>可以使用 <code>conda install</code> 或 <code>pip install</code> 命令安装需要的 <code>Python</code> 库</p>
+<p>例如，安装 <code>cern root</code> 需要 <code>Python</code> 中的 <code>numpy</code> 库，使用以下命令可以进行安装</p>
+<pre><code class="language-bash">conda install numpy
+或
+pip install numpy
+</code></pre>
+<h2 id="从本地上传所需的安装包">从本地上传所需的安装包</h2>
+<p>之前我们已经从私有云上下载了 <span style="color: blue;">“CheckMATE脚本安装包”</span> 文件夹</p>
+<p>现在，在本地的 <span style="color: blue;">“CheckMATE脚本安装包”</span> 文件夹内，打开一个新的本地终端，输入以下命令并输入密码把文件夹内的内容全部上传到公共集群的用户文件夹内</p>
+<pre><code class="language-bash">scp -p 20015 ./* 用户名@59.70.85.6:/home/用户名/Downloads/
+</code></pre>
+<p><span style="color: red;"><strong>./*</strong></span> 指的是当前目录下的所有文件， <span style="color: red;">*</span> 被称为 <span style="color: red;">“通配符”</span></p>
+<h1 id="安装-cern-root">安装 <code>cern root</code></h1>
+<p>首先，需要把 <code>Python</code> 环境切换到允许安装 <code>cern root</code> 的环境中并在安装过程中全程保持在此环境内。此前示例的 <code>py27</code> 环境就是一个可行的环境，以此环境为例进行说明</p>
+<pre><code class="language-bash">conda activate py27
+</code></pre>
+<h2 id="安装依赖项">安装依赖项</h2>
+<p><code>cern root</code> 所需要的大部分依赖项在公共集群服务器的系统上都已经安装好了，只有 <code>Python</code> 的 <code>numpy</code> 库以及 <code>libXpm</code> 库的 <code>xpm.h</code> 文件没有安装</p>
+<p>完整的依赖项可以在下面的链接中查看</p>
+<p><a href="https://root.cern/install/dependencies/">https://root.cern/install/dependencies/</a></p>
+<h3 id="安装-numpy-库">安装 <code>numpy</code> 库</h3>
+<p>可以使用以下命令直接在当前所处的 <code>Python</code> 环境中安装 <code>numpy</code> 库</p>
+<pre><code class="language-bash">conda install numpy
+或
+pip install numpy
+</code></pre>
+<h3 id="安装-xpmh">安装 <code>xpm.h</code></h3>
+<p>此前，我们已经在 <span style="color: blue;">Downloads</span> 文件夹内下载好了 <code>libXpm-devel-3.5.12-2.el7_9.x86_64.rpm</code> 文件</p>
+<p>使用 <code>cp</code> 命令，把该文件复制到 <span style="color: blue;">Dependencies</span> 文件夹中</p>
+<pre><code class="language-bash"><span class="hljs-built_in">cp</span> libXpm-devel-3.5.12-2.el7_9.x86_64.rpm ~/Dependencies/
+</code></pre>
+<p>接下来切换到 <span style="color: blue;">Dependencies</span> 文件夹中</p>
+<pre><code class="language-bash"><span class="hljs-built_in">cd</span> ~/Dependencies
+</code></pre>
+<p>接下来使用以下命令在当前目录安装该开发库</p>
+<pre><code class="language-bash">rpm2cpio libXpm-devel-3.5.12-2.el7_9.x86_64.rpm | cpio -idvm
+</code></pre>
+<p><code>rpm2cpio</code> <strong>(即 rpm to cpio)</strong> 可以将 <code>rpm</code> 文件解压成 <code>cpio</code> 形式<br>
+<code>cpio</code> 命令，则是用于在 Linux 系统中打包和解包文件<br>
+<code>-idvm</code> 中的 <code>-i</code> 表示解压（即提取文件），<code>-d</code> 表示自动创建目录，<code>-v</code> 表示详细输出，<code>-m</code> 表示保留文件的时间戳和权限信息<br>
+<code>|</code> 被称为 <strong>“管道命令”(pipe)</strong>，它的功能是把左侧命令的输出作为右侧命令的输入并执行</p>
+<p>因此这一语句的含义是 <code>rpm2cpio</code> 命令将 <code>libXpm-devel-3.5.12-2.el7_9.x86_64.rpm</code> 文件解压成 <code>cpio</code> 形式的文件输出，然后通过管道将 <code>cpio</code> 形式的文件传递给 <code>cpio -idvm</code> 命令。</p>
+<p>此时使用 <code>ls</code> 命令查看当前文件夹下的内容，应该是下面这样的</p>
+<pre><code class="language-bash">(py27) [用户名@workstation Dependencies]$ <span class="hljs-built_in">ls</span>
+libXpm-devel-3.5.12-2.el7_9.x86_64.rpm  usr
+</code></pre>
+<p>进一步使用 <code>ls</code> 命令查看</p>
+<pre><code class="language-bash">(py27) [用户名@workstation Dependencies]$ <span class="hljs-built_in">ls</span> usr/include/X11/
+xpm.h
+</code></pre>
+<p>这就是我们安装 <code>cern root</code> 需要的文件</p>
+<h2 id="开始安装-cern-root">开始安装 <code>cern root</code></h2>
+<p>再次强调，安装全过程中一定要确保所处的终端位于可行的 <code>Python</code> 环境中，并且该环境已安装 <code>numpy</code> 库</p>
+<p>接着切换到 <span style="color: blue;">Downloads</span> 文件夹中，此处应该有从私有云上下载到本地并从本地上传到的此处的 <code>root_v6.18.04.source.tar.gz</code> 压缩包</p>
+<h3 id="解压缩">解压缩</h3>
+<p>使用 <code>tar</code> 命令进行解压</p>
+<pre><code class="language-bash">tar -zxvf ./root_v6.18.04.source.tar.gz
+</code></pre>
+<p><code>-z</code> 参数表示用gzip来压缩/解压缩文件<br>
+<code>-x</code> 参数表示解压<br>
+<code>-v</code> 参数表示打印压缩/解压缩的部分细节<br>
+<code>-f</code> 参数表示将在后方指定目标文件名</p>
+<p>因此也可以选择使用 <code>tar -zxf</code> 命令进行解压，这样就不会把解压细节打印到屏幕上</p>
+<h3 id="移动文件夹">移动文件夹</h3>
+<p>使用 <code>mv</code> 命令把解压出来的文件夹移动到想要存放的文件夹处，这里以 <code>opt</code> 文件夹为例</p>
+<pre><code class="language-bash"><span class="hljs-built_in">mv</span> -T root-6.18.04 ~/opt/root-6.18.04
+</code></pre>
+<p><code>-T</code> 参数表示将源路径视为普通文件，并将其移动到目标路径，而不是将源路径当作目录，并将其目录内容移动到目标路径</p>
+<h3 id="切换到-root-文件夹内">切换到 <code>root</code> 文件夹内</h3>
+<p>使用 <code>cd</code> 命令切换到 <code>root-6.18.04</code> 文件夹内</p>
+<pre><code class="language-bash"><span class="hljs-built_in">cd</span> ~/opt/root-6.18.04
+</code></pre>
+<p>此目录内存放了 <code>cern root</code> 的所有源代码</p>
+<h3 id="建立构建目录和安装目录">建立构建目录和安装目录</h3>
+<p>使用 <code>mkdir</code> 命令建立两个文件夹</p>
+<pre><code class="language-bash"><span class="hljs-built_in">mkdir</span> builddir installdir
+</code></pre>
+<p><code>builddir</code> 目录为构建目录，在此目录内执行编译和安装操作，编译和安装过程中生成的中间产物会存放在此目录中<br>
+<code>installdir</code> 目录为安装目录，软件最终会被安装到此处</p>
+<p>建立完这两个目录后，切换到构建目录中</p>
+<pre><code class="language-bash"><span class="hljs-built_in">cd</span> builddir
+</code></pre>
+<h3 id="生成和配置构建系统">生成和配置构建系统</h3>
+<p>在 <code>builddir</code> 目录内，执行以下操作，生成构建系统</p>
+<pre><code class="language-bash">cmake3 -DCMAKE_INSTALL_PREFIX=../installdir ..
+</code></pre>
+<p>这行命令表示，将使用 <code>cmake3</code> 进行整个软件的编译和安装</p>
+<p>第一个参数 <code>-DCMAKE_INSTALL_PREFIX=../installdir</code> 表明软件将安装到 <code>../installdir</code> 下<br>
+第二个参数 <code>..</code> 表明软件源代码在 <code>..</code> 目录，即当前目录的上一层目录内</p>
+<p>此时，将会遇到一个报错信息</p>
+<pre><code class="language-text">CMake Error at cmake/modules/SearchInstalledSoftware.cmake:262 (message):
+  libXpm and Xpm headers must be installed.
+Call Stack (most recent call first):
+  CMakeLists.txt:159 (include)
+</code></pre>
+<p>该报错信息提示我们，找不到 libXpm 和 Xpm 的头文件，因此我们需要到编译缓存文件中手动指定这两个文件的所在之处</p>
+<p>使用 <code>vim</code> 编辑器打开 <code>cmake</code> 缓存文件 <code>CMakeCache.txt</code></p>
+<pre><code class="language-bash">vim CMakeCache.txt
+</code></pre>
+<p>在编辑器界面内，依次输入 <code>/ + Xpm</code> 并按下键盘上的 <code>Enter</code> 键，查找文本中所有出现 <code>Xpm</code> 的位置，使用键盘上的 <code>n</code> 键在 <code>Xpm</code> 出现的不同位置之间进行跳转，最终要找到下面这几行内容</p>
+<pre><code class="language-text">//Path to a file.
+X11_Xpm_INCLUDE_PATH:PATH=X11_Xpm_INCLUDE_PATH-NOTFOUND
+
+//Path to a library.
+X11_Xpm_LIB:FILEPATH=X11_Xpm_LIB-NOTFOUND
+</code></pre>
+<p>可以看到，这两个路径均为 <code>NOTFOUND</code> 状态</p>
+<p>按下键盘上的 <code>i</code> 或 <code>insert</code> 键，进入插入模式，即可更改文件内容，操作方式和其它常见编辑器相同。此时界面左下角会提示 <code>-- INSERT --</code></p>
+<p>将多余的内容删除</p>
+<pre><code class="language-text">//Path to a file.
+X11_Xpm_INCLUDE_PATH:PATH=
+
+//Path to a library.
+X11_Xpm_LIB:FILEPATH=
+</code></pre>
+<p>随后填入正确的路径，此处使用的是前面提到的示例路径</p>
+<pre><code class="language-text">//Path to a file.
+X11_Xpm_INCLUDE_PATH:PATH=/home/用户名/Dependencies/usr/include
+
+//Path to a library.
+X11_Xpm_LIB:FILEPATH=/usr/lib64/libXpm.so.4
+</code></pre>
+<p>第一个路径就是前面安装的 <code>X11/xpm.h</code> 的所在位置<br>
+第二个路径是 <code>libXpm</code> 所在的位置，此处使用的是公共集群系统中自带的 <code>libXpm</code> 文件所在的位置</p>
+<p>修改完毕后，按下键盘上的 <code>ESC</code> 键，退出插入模式，再依次按下 <code>: + w + q</code> 界面左下角会显示 <code>:wq</code> 并按下键盘上的 <code>Enter</code> 键以保存并退出 <code>vim</code> 编辑器</p>
+<p><code>:</code> 即冒号，表示进入命令模式，此时你可以输入一系列命令操作 <code>vim</code> 编辑器<br>
+<code>w</code> 表示 <code>write</code> 即写入，可以理解为保存操作
+<code>q</code> 表示 <code>quit</code> 即退出</p>
+<p>完成以上操作后，再次执行 <code>cmake3</code> 指令重新配置构建系统并等待其完成</p>
+<pre><code class="language-bash">cmake3 -DCMAKE_INSTALL_PREFIX=../installdir ..
+</code></pre>
+<h3 id="打开所有子软件库的开关">打开所有子软件库的开关</h3>
+<p><code>cern root</code> 软件包括许多子软件库，这些子软件库拥有各不相同的功能，默认情况下，许多子软件库处于 <code>OFF</code> 状态，即不进行安装。我们选择安装全部子软件库，使用以下命令进行操作</p>
+<pre><code class="language-bash">sed -i <span class="hljs-string">&#x27;/minuit2:/s/OFF/ON/g&#x27;</span> CMakeCache.txt
+</code></pre>
+<p>这个操作会把 <code>CMakeCache.txt</code> 文件中所有以 <code>minuit2:</code> 开头的行中的 <code>OFF</code> 全部替换为 <code>ON</code></p>
+<h3 id="执行安装命令">执行安装命令</h3>
+<p>完成以上所有操作后就可以进行 <code>cern root</code> 的安装了，使用以下命令</p>
+<pre><code class="language-bash">cmake3 --build . -- install -j20
+</code></pre>
+<p>即，使用 <code>cmake3</code> 在当前目录进行编译和安装操作</p>
+<p><code>-j</code> 表示准许同时使用的进程数。准许使用的进程数越多安装速度会越快，但建议不要在公共集群上使用过多进程，可能会受到管理员的限制。此处使用的是 20 个进程即 <code>-j20</code></p>
+<p>输入完命令后等待片刻，<code>cern root</code> 就会安装完毕</p>
+<h3 id="第一次打开-cern-root-以及配置环境变量">第一次打开 <code>cern root</code> 以及配置环境变量</h3>
+<p>此时 <code>cern root</code> 已经安装完毕，但输入 <code>root</code> 指令仍然无法进入 <code>cern root</code>，这是因为 <code>cern root</code> 还未被启动。</p>
+<p>按照之前示例中一直使用的路径，使用以下命令启动 <code>cern root</code></p>
+<pre><code class="language-bash"><span class="hljs-built_in">source</span> opt/root-6.18.04/installdir/bin/thisroot.sh
+</code></pre>
+<p>输入完以上命令后，即可输入 <code>root</code> 进入 <code>cern root</code> 界面</p>
+<pre><code class="language-bash">[用户名@workstation ~]$ root
+  ------------------------------------------------------------
+ | Welcome to ROOT 6.18/04                  https://root.cern |
+ |                               (c) 1995-2019, The ROOT Team |
+ | Build <span class="hljs-keyword">for</span> linuxx8664gcc on Sep 11 2019, 15:38:23           |
+ | From tags/v6-18-04@v6-18-04                                |
+ | Try <span class="hljs-string">&#x27;.help&#x27;</span>, <span class="hljs-string">&#x27;.demo&#x27;</span>, <span class="hljs-string">&#x27;.license&#x27;</span>, <span class="hljs-string">&#x27;.credits&#x27;</span>, <span class="hljs-string">&#x27;.quit&#x27;</span>/<span class="hljs-string">&#x27;.q&#x27;</span> |
+  ------------------------------------------------------------
+</code></pre>
+<p>为了避免每次重新启动终端或重新登录后都必须手动启动一次 <code>cern root</code> 的麻烦，可以在环境变量中添加上面的启动命令</p>
+<p>打开 <code>.bashrc</code></p>
+<pre><code class="language-bash">vim ~/.bashrc
+</code></pre>
+<p>使用键盘上的 <code>i</code> 或 <code>insert</code> 键在 <code>.bashrc</code> 的末尾添加一行语句</p>
+<pre><code class="language-bashrc">source opt/root-6.18.04/installdir/bin/thisroot.sh # ROOT
+</code></pre>
+<p><code>#</code> 后面的 <code>ROOT</code> 是该行的一个注释，表示这一语句为启动 <code>cern root</code> 的语句，无实质作用。</p>
+<p>这样未来每次重新启动终端或重新登陆后都可以直接使用 <code>root</code> 指令进入 <code>cern root</code></p>
+<p><strong>至此 <code>cern root</code> 的安装全部完成</strong></p>
+</div>
+        </div>
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </body>
+    </html>
