@@ -1,0 +1,9 @@
+SR            obs  bkg   bkg_err  S95_obs  S95_exp  
+SR-C1C1-LM    1    6.2   2.0      3.3      6.1      
+SR-C1C1-HM    4    4.0   1.8      6.2      6.2      
+SR-C1N2OS-LM  14   12.2  4.8      12.9     11.7     
+SR-C1N2OS-HM  4    5.0   2.0      5.7      6.5      
+SR-C1N2SS-LM  2    2.0   0.7      4.6      4.6      
+SR-C1N2SS-HM  3    2.1   1.1      5.9      5.1      
+SR-Wh-LM      4    5.3   1.4      5.2      6.4      
+SR-Wh-HM      2    1.3   0.4      4.6      4.0      

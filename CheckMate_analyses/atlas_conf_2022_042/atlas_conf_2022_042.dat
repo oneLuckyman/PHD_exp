@@ -1,0 +1,65 @@
+a
+atlas_conf_2022_042
+Liangliang Shang
+shangliangliang@htu.edu.cn
+ATLAS, 2||4 taus, etmiss
+ATLAS
+ATLAS-CONF-2022-042
+2||4 taus, etmiss
+sqrt(s) = 13 TeV
+int(L) = 139 fb^-1
+
+139
+13
+ATLAS
+staus
+etmiss
+
+n
+SR-C1C1-LM
+SR-C1C1-HM
+SR-C1N2OS-LM
+SR-C1N2OS-HM
+SR-C1N2SS-LM
+SR-C1N2SS-HM
+SR-Wh-LM
+SR-Wh-HM
+
+y
+obs
+bkg
+bkg_err
+
+1
+6.2
+2.0
+4
+4.0
+1.8
+14
+12.2
+4.8
+4
+5.0
+2.0
+2
+2.0
+0.7
+3
+2.1
+1.1
+4
+5.3
+1.4
+2
+1.3
+0.4
+A
+n
+n
+n
+y
+77
+n
+y
+Finish
